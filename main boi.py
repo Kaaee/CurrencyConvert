@@ -43,7 +43,7 @@ if __name__ == "__main__":
     print("Here are all the country codes: https://fixer.io/symbols\n")
     print(Currency_convertor.rates)
     MY_ACCESS_KEY = "6b413894a1fc04d14cdf05ecc33d3fac"
-    url = str.__add__('http://data.fixer.io/api/latest?access_key=', MY_ACCESS_KEY)
+    url = str.__add__('http://data.fixer.io/api/latest?access_key=31d1748d671376fee2f5d2f0ac241370)
     c = Currency_convertor(url)
     from_country = input("From Country: ")
     to_country = input("TO Country: ")
