@@ -9,7 +9,6 @@ import tkinter
 
 
 #creating the epic gui nobody asked for
-class
 
 
 class Currency_convertor:
@@ -41,9 +40,8 @@ class Currency_convertor:
 if __name__ == "__main__":
     print("Welcome to Currency Converter \n" )
     print("Here are all the country codes: https://fixer.io/symbols\n")
-    print(Currency_convertor.rates)
     MY_ACCESS_KEY = "6b413894a1fc04d14cdf05ecc33d3fac"
-    url = str.__add__('http://data.fixer.io/api/latest?access_key=MY_ACCESS_KEY)
+    url = str.__add__('http://data.fixer.io/api/latest?access_key=', MY_ACCESS_KEY)
     c = Currency_convertor(url)
     from_country = input("From Country: ")
     to_country = input("TO Country: ")
