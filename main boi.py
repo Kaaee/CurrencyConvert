@@ -1,48 +1,44 @@
-#python program does an epic currency conversion (really hard code) (definetly didnt go on stackoverflow every 2 seconds
-#no more questions please bigman. thank you and just use it. now.
-
-# Import requestie boi
+# Needs pip for requests to be installed on the local machine
+# you still need to install requests in pycharm
 import requests
 
-#import the PHAT gui
+# GUI Import
 import tkinter
 
 
-#creating the epic gui nobody asked for
+# GUI
 
 
-class Currency_convertor:
-    # remove this and ill beat u
+class currency_converter:
+
     rates = {}
 
     def __init__(self, url):
         data = requests.get(url).json()
 
-        # we are want base and rates yes so leave here ty
+        # we want base rates
         self.rates = data["rates"]
 
-
-        # comment look cool
-
-    # amount with conversion because gangsta
+    # amount with conversion
     def convert(self, from_currency, to_currency, amount):
         initial_amount = amount
         if from_currency != 'EUR':
             amount = amount / self.rates[from_currency]
 
-
         amount = round(amount * self.rates[to_currency], 2)
         print('{} {} = {} {}'.format(initial_amount, from_currency, amount, to_currency))
 
-    # main shablam
+    # main
+
+
 
 
 if __name__ == "__main__":
-    print("Welcome to Currency Converter \n" )
+    print("Welcome to Currency Converter \n")
     print("Here are all the country codes: https://fixer.io/symbols\n")
     MY_ACCESS_KEY = "6b413894a1fc04d14cdf05ecc33d3fac"
     url = str.__add__('http://data.fixer.io/api/latest?access_key=', MY_ACCESS_KEY)
-    c = Currency_convertor(url)
+    c = currency_convertor(url)
     from_country = input("From Country: ")
     to_country = input("TO Country: ")
     amount = int(input("Amount: "))
