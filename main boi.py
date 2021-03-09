@@ -6,7 +6,7 @@ import requests
 import tkinter
 
 
-# GUI
+# GUI (not done yet)
 
 
 class currency_converter:
