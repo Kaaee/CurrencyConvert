@@ -38,5 +38,8 @@ if __name__ == "__main__":
     from_country = input("From Country: ")
     to_country = input("To Country: ")
     amount = int(input("Amount you'd like to convert: "))
+    # code below changes user input from lower case to uppercase
+    from_country.upper()
+    to_country.upper()
 
     c.convert(from_country, to_country, amount)
